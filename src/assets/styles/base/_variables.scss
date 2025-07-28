@@ -1,0 +1,60 @@
+@use "../helpers" as *;
+
+:root {
+    --container-padding-x: 160px;
+    --container-width: 1600px;
+
+    @include laptop {
+        --container-width: 1280px;
+        --container-padding-x: 32px;
+    }
+
+    @include tablet {
+        --container-width: 768px;
+        --container-padding-x: 24px;
+    }
+
+    @include mobile {
+        --container-width: 463px;
+        --container-padding-x: 16px;
+    }
+
+    @include mobile-s {
+        --container-width: 357px;
+        --container-padding-x: 16px;
+    }
+
+    --font-family: 'Be Vietnam Pro';
+    --font-family-second: "Inter";
+
+    --border: 1px solid var(--color-light-95);
+    --border-radius: 8px;
+
+    --transition-duration: 0.2s;
+
+    --color-light: #FFF;
+    --color-black: #000;
+
+    --color-orange-50: #FF9500;
+    --color-orange-70: #FFBF65;
+    --color-orange-75: #FFCA80;
+    --color-orange-80: #FFD499;
+    --color-orange-90: #FFE4CC;
+    --color-orange-95: #FFF4E5;
+    --color-orange-97: #FFF9F0;
+    --color-orange-99: #FFFDFA;
+
+    --color-light-90: #E4E4E7;
+    --color-light-95: #F1F1F3;
+    --color-light-97: #F7F7F8;
+    --color-light-99: #FCFCFD;
+
+    --color-gray-10: #191919;
+    --color-gray-15: #262626;
+    --color-gray-20: #333333;
+    --color-gray-30: #4C4C4D;
+    --color-gray-35: #59595A;
+    --color-gray-40: #656567;
+    --color-gray-60: #98989A;
+    --color-gray-70: #B3B3B3;
+}

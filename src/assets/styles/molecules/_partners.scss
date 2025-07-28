@@ -1,0 +1,45 @@
+@use "../helpers" as *;
+
+.partners {
+    display: flex;
+    background-color: var(--color-light-99);
+    border: var(--border);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin-block: 100px;
+
+    @include laptop {
+        padding: 24px;
+    }
+
+    @include tablet {
+        max-width: 768px;
+        overflow-x: scroll;
+    }
+
+    @include mobile {
+        max-width: 463px;
+    }
+
+    @include mobile-s {
+        max-width: 357px;
+    }
+
+    &__item {
+        padding: 30px 40px;
+
+        @include laptop {
+            padding: 20px 30px;
+        }
+
+        &:not(:first-child) {
+            border-left: var(--border);
+        }
+    }
+
+    &__image {
+        max-width: 357px !important;
+        height: auto;
+    }
+
+}

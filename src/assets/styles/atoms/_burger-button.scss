@@ -1,0 +1,37 @@
+@use "../helpers" as *;
+
+.burger-button {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 6px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+
+
+    &__line {
+        border-radius: var(--border-radius);
+        width: 24px;
+        height: 3px;
+        background-color: var(--color-gray-15);
+        align-self: flex-end;
+        transition-duration: var(--transition-duration);
+
+    }
+
+    &__line:last-child {
+        width: 12px;
+    }
+
+    @include hover {
+        .burger-button__line {
+            background-color: var(--color-orange-50);
+        }
+    }
+}

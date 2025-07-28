@@ -1,0 +1,196 @@
+@use '../helpers' as *;
+
+.header {
+
+    &__extra {
+        margin-top: 20px;
+        margin-inline: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-orange-50);
+        border-radius: var(--border-radius);
+        text-align: center;
+        white-space: normal;
+        padding-block: 14px;
+
+        @include laptop {
+            padding-block: 10px;
+        }
+
+        @include mobile {
+            margin-top: 40px;
+            margin-inline: 16px;
+        }
+
+        @include mobile-s {
+            margin-inline: 12px;
+        }
+
+
+        &-faded {
+            color: var(--color-light);
+            display: flex;
+            column-gap: 26px;
+            font-size: 18px;
+
+            @include hover {
+                color: var(--color-light);
+                opacity: 0.8;
+
+                .icon--arrow {
+                    opacity: 0.8;
+                }
+            }
+
+            @include laptop {
+                font-size: 14px;
+            }
+
+            @include mobile {
+                column-gap: 12px;
+            }
+
+            @include mobile-s {
+                font-size: 12px;
+            }
+        }
+    }
+
+
+    &__body {
+        padding: 20px 132px 24px 132px;
+        border-bottom: var(--border);
+
+        @include laptop {
+            padding: 16px 60px 20px 60px;
+        }
+
+        @include tablet {
+            padding: 16px 20px 20px 20px;
+        }
+
+        @include mobile {
+            padding: 0px 14px;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 0;
+
+
+        &-list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            column-gap: 5px;
+
+
+            &--modal {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                row-gap: 40px;
+            }
+        }
+
+        &-left {
+            display: flex;
+            align-items: center;
+            column-gap: 50px;
+
+            @include tablet {
+                column-gap: 25px;
+            }
+        }
+    }
+
+    &__logo {
+        position: relative;
+        display: flex;
+        width: 54px;
+        height: 54px;
+        background-color: var(--color-orange-50);
+        border-radius: var(--border-radius);
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            width: 32px;
+            height: 32px;
+            background: url('../../../../public/icons/logo-shape.svg') center/contain no-repeat;
+        }
+
+        @include laptop {
+            width: 44px;
+            height: 44px;
+        }
+
+        @include mobile {
+            width: 40px;
+            // height: 40px;
+        }
+    }
+
+    &__item {
+
+        // max-width: 100px;
+        // width: 100%;
+
+        // @include laptop {
+        //     max-width: 80px;
+        // }
+
+        &--burger {
+            margin-left: 24px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--border-radius);
+        color: var(--color-gray-15);
+        padding: 14px 34px;
+        font-size: 18px;
+
+        max-width: 100px;
+        user-select: none;
+
+        @include laptop {
+            font-size: 14px;
+            max-width: 80px;
+            padding: 14px 20px;
+        }
+
+        &--selected {
+            background-color: var(--color-light-95);
+            pointer-events: none;
+
+            @include hover {
+                background-color: var(inherit);
+            }
+
+        }
+
+        // &--accent {
+        // border-radius: var(--border-radius);
+        //     background-color: var(--color-orange-50);
+        //     color: var(--color-light);
+
+        //     @include hover {
+        //         color: var(--color-light);
+        //         background-color: var(--color-orange-75);
+        //     }
+        // }
+    }
+}

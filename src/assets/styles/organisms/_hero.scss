@@ -1,0 +1,125 @@
+@use '../helpers' as *;
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: 100px;
+    row-gap: 16px;
+
+    @include laptop {
+        margin-block: 80px;
+    }
+
+    @include mobile {
+        margin-block: 64px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+
+        @include laptop {
+            row-gap: 16px;
+        }
+
+        @include mobile {
+            row-gap: 6px;
+        }
+
+        &-description {
+            @include fluid-text(18, 14);
+            text-align: center;
+
+            @include mobile-s {
+                font-size: 13px;
+            }
+        }
+
+        &-inner {
+            position: relative;
+            background-color: var(--color-light);
+            border-radius: var(--border-radius);
+            display: flex;
+            padding: 12px 24px 12px 12px;
+            align-items: center;
+            column-gap: 10px;
+            border: var(--border);
+
+            @include mobile {
+                padding: 14px;
+            }
+
+            @include mobile-s {
+                padding: 6px;
+                column-gap: 4px;
+            }
+
+            &::after {
+                position: absolute;
+                top: -9px;
+                left: -7px;
+                translate: -50% -50%;
+                content: '';
+                width: 39px;
+                height: 43px;
+                display: block;
+                background: url('../../../../public/icons/hero-deco.svg') center/contain no-repeat;
+
+                @include mobile {
+                    top: 7px;
+                    left: 5px;
+                }
+            }
+        }
+
+
+    }
+
+    &__title {
+        &-alt {
+            color: var(--color-orange-50);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 60px;
+
+        @include laptop {
+            row-gap: 50px;
+        }
+
+        &-links {
+            display: flex;
+            column-gap: 12px;
+        }
+
+        &-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 6px
+        }
+    }
+
+    &__subtitle {
+        @include fluid-text(36, 14);
+        color: var(--color-black);
+        font-weight: 500;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
