@@ -1,0 +1,61 @@
+@use "../helpers" as *;
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: var(--border);
+    border-radius: 14px 14px 0 0;
+    padding: fluid(40, 20);
+    background-color: var(--color-light);
+    row-gap: 30px;
+    width: 100%;
+
+    @include laptop {
+        row-gap: 20px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 20px;
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    &__item {
+        display: flex;
+        column-gap: 12px;
+        align-items: center;
+        padding: 14px;
+        border: var(--border);
+        border-radius: var(--border-radius);
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: var(--color-orange-50);
+        padding-block: 20px;
+        border-radius: 0 0 14px 14px;
+        color: var(--color-light);
+
+        @include mobile {
+            padding-block: 18px;
+        }
+
+        @include hover {
+            background-color: var(--color-orange-90);
+            color: var(--color-black);
+
+        }
+    }
+}

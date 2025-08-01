@@ -1,0 +1,48 @@
+@use "../helpers" as *;
+
+.testimonial-card {
+    max-width: fluid(784, 357);
+
+    &__description {
+        background-color: var(--color-light);
+        border-radius: 12px 12px 0 0;
+        border: var(--border);
+        border-bottom: none;
+        padding: 50px;
+
+
+        @include laptop {
+            padding: 40px;
+        }
+
+        @include mobile {
+            padding: 30px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: var(--color-light-99);
+        padding: fluid(30, 20) fluid(50, 30);
+        border: var(--border);
+        border-radius: 0px 0px 12px 12px;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        &-logo {
+            border-radius: var(--border-radius);
+        }
+
+        &-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--color-gray-20);
+        }
+    }
+}

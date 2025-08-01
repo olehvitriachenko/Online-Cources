@@ -1,0 +1,44 @@
+@use '../helpers' as *;
+
+.marker {
+    --size: 52px;
+
+    position: relative;
+
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--color-orange-95);
+    border-radius: var(--border-radius);
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        transition-duration: var(--transition-duration);
+        top: 50%;
+        left: 50%;
+        width: 2px;
+        height: 14px;
+        background-color: var(--color-black);
+
+    }
+
+    &::before {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    &::after {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+}
+
+details[open] .marker {
+    &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}

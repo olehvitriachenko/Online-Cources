@@ -1,0 +1,61 @@
+@use "helpers" as *;
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    color: var(--color-gray-30);
+    background-color: var(--color-light-97);
+    white-space: nowrap;
+    @include fluid-text(18, 14);
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+
+    @include hover {
+        color: var(--color-orange-50);
+    }
+
+    &[class] {
+        text-decoration: none;
+    }
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a,
+button {
+    &[aria-label] {
+        position: relative;
+
+        &::before {
+            @include abs-center;
+            @include square(44px);
+
+            content: '';
+        }
+    }
+}
+
+h1,
+.h1 {
+    @include fluid-text(48, 16);
+    font-weight: 600;
+    color: var(--color-gray-10);
+}

@@ -1,0 +1,9 @@
+@use "../helpers" as *;
+
+.tabs {
+    display: flex;
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-medium);
+    padding: 12px;
+    column-gap: 1px;
+}

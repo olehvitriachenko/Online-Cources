@@ -1,0 +1,69 @@
+@use '../helpers/' as *;
+
+.section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+    margin-bottom: 100px;
+    white-space: wrap;
+
+    @include laptop {
+        row-gap: 60px;
+    }
+
+    @include mobile {
+        row-gap: 40px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        row-gap: 6px;
+
+        @include laptop {
+            row-gap: 4px;
+        }
+
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            row-gap: 20px;
+
+
+            @include tablet {
+                flex-direction: column;
+                align-items: flex-start;
+                row-gap: 20px;
+            }
+
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+    }
+
+    &__description {
+        max-width: fluid(1177, 320);
+        @include fluid-text(18, 14);
+        white-space: normal;
+
+
+        @include laptop {
+            max-width: 933px;
+        }
+
+    }
+
+    &__body {
+        &:not(.pricing-card) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__link {
+        white-space: nowrap;
+    }
+}

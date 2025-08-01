@@ -1,0 +1,27 @@
+@use 'normalize.scss';
+@use 'fonts';
+@use 'variables';
+@use 'globals';
+@use 'utils';
+
+@use './blocks/header';
+@use './blocks/section';
+@use './blocks/hero';
+@use './blocks/grid';
+@use './blocks/icon';
+@use './blocks/badge';
+@use './blocks/burger-button';
+@use './blocks/button';
+@use './blocks/feature-content';
+@use './blocks/modal';
+@use './blocks/partners';
+@use './blocks/intro';
+@use './blocks/benefits';
+@use './blocks/course';
+@use './blocks/testimonial-card';
+@use './blocks/tabs.scss';
+@use './blocks/features.scss';
+@use './blocks/pricing-card.scss';
+@use './blocks/questions';
+@use './blocks/accordion';
+@use './blocks/marker';

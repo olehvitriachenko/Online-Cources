@@ -1,0 +1,53 @@
+@use "../helpers" as *;
+
+.icon {
+    display: flex;
+    --iconSize: 24px;
+
+    &--arrow {
+
+        &::after {
+            content: '';
+            width: var(--iconSize);
+            height: var(--iconSize);
+            display: block;
+            margin-left: 23px;
+            background: url('../../../../public/icons/right-arrow.svg') center/contain no-repeat;
+
+            @include laptop {
+                --iconSize: 20px;
+                margin-left: 14px;
+            }
+        }
+
+
+    }
+
+    &--blaze {
+        width: 48px;
+        height: 48px;
+        background-color: var(--color-orange-95);
+        position: relative;
+        border-radius: var(--border-radius);
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            width: var(--iconSize);
+            height: var(--iconSize);
+            display: block;
+            background: url('../../../../public/icons/blaze.svg') center/contain no-repeat;
+
+            @include laptop {
+                --iconSize: 20px;
+            }
+        }
+    }
+
+    @include laptop {
+        --iconSize: 20px;
+    }
+}

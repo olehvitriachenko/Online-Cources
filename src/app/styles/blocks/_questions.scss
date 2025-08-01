@@ -1,0 +1,35 @@
+@use '../helpers' as *;
+
+.questions {
+    display: flex;
+    justify-content: center;
+    white-space: wrap;
+
+    @include tablet {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    &__inner {
+        padding: fluid(100, 24);
+        column-gap: 120px;
+        display: flex;
+        max-width: fluid(1595, 357);
+        background-color: var(--color-light);
+        border-radius: var(--border-radius);
+    }
+
+    &__header {
+        // max-width: ;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+
+        @include mobile {
+            row-gap: 20px;
+        }
+    }
+}

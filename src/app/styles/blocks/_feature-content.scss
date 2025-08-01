@@ -1,0 +1,53 @@
+@use "../helpers" as *;
+
+.feature-content {
+    --featureSize: 32px;
+
+    width: var(--featureSize);
+    height: var(--featureSize);
+
+
+    display: flex;
+
+    background-color: transparent;
+    border: var(--border);
+    border-radius: var(--border-radius-small);
+
+    @include mobile {
+        --featureSize: 24px
+    }
+
+    &--included {
+        position: relative;
+        border-color: var(--color-orange-95);
+        background-color: var(--color-orange-95);
+
+        &::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: url('public/icons/included.svg');
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &--excluded {
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: url('public/icons/excluded.svg');
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
