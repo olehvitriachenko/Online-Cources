@@ -1,0 +1,28 @@
+@use "../helpers" as *;
+
+/* Весь скролбар */
+::-webkit-scrollbar {
+  width: 6px; /* товщина */
+}
+
+/* Поле, де рухається повзунок */
+::-webkit-scrollbar-track {
+  background: inherit;
+  border-radius: var(--border-radius);
+  margin-block: 10px;
+
+  @include tablet {
+    margin-block: 20px;
+  }
+}
+
+/* Сам повзунок */
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray-70);
+  border-radius: var(--border-radius);
+}
+
+/* Ховер ефект */
+// ::-webkit-scrollbar-thumb:hover {
+//   background-color: var(--color-gray-40);
+// }

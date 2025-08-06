@@ -10,7 +10,7 @@ function Navigation({ onBurgerClick }: { onBurgerClick: () => void }) {
       <div className="header__main">
         <nav className="header__nav">
           <div className="header__nav-left">
-            <span className="header__logo">
+            <span className="header__logo logo">
               <p className="visually-hidden">Logo</p>
             </span>
             <ul className="header__nav-list hidden-mobile">

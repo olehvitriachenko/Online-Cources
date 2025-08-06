@@ -1,153 +1,191 @@
 @use "../helpers" as *;
 
 .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: var(--border-radius);
-    background-color: var(--color-orange-50);
-    color: var(--color-light);
-    font-size: 18px;
-    border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius);
+  background-color: var(--color-orange-50);
+  color: var(--color-light);
+  font-size: 18px;
+  border: 1px solid transparent;
 
-    &:not(.header__link) {
-        padding: 18px 24px;
-
-        @include laptop {
-            padding: 14px 20px;
-        }
-
-        @include mobile-s {
-            padding: 10px 16px;
-        }
-    }
+  &:not(.header__link) {
+    padding: 18px 24px;
 
     @include laptop {
-        font-size: 14px;
+      padding: 14px 20px;
+    }
+
+    @include mobile-s {
+      padding: 10px 16px;
+    }
+  }
+
+  @include laptop {
+    font-size: 14px;
+  }
+
+  @include hover {
+    color: var(--color-light);
+    background-color: var(--color-orange-75);
+  }
+
+  &--light {
+    color: var(--color-gray-15);
+    background-color: var(--color-light);
+    border: var(--border);
+
+    @include hover {
+      background-color: var(--color-light-95);
+      color: var(--color-gray-50);
+    }
+  }
+
+  &--play,
+  &--pause {
+    position: relative;
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 68px;
+    padding: 14px;
+    width: 72px;
+    height: 72px;
+
+    @include hover {
+      background: rgba(255, 255, 255, 0.4);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &--play::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    content: "";
+    width: 44px;
+    height: 44px;
+    display: block;
+    background: url("public/icons/play.svg") center/contain no-repeat;
+  }
+
+  &--view {
+    background-color: var(--color-light);
+    border: var(--border);
+    font-weight: 500;
+    color: var(--color-gray-15);
+
+    @include hover {
+      background-color: var(--color-light-95);
+      color: var(--color-gray-50);
+    }
+  }
+
+  &--box {
+    --size: 74px;
+
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--color-light-99);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 20px;
+
+    @include laptop {
+      --size: 54px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      content: "";
+      width: 44px;
+      height: 44px;
+      display: block;
+      background: url("public/icons/right-down-arrow.svg") center/contain
+        no-repeat;
     }
 
     @include hover {
-        color: var(--color-light);
-        background-color: var(--color-orange-75);
+      background-color: var(--color-light-95);
     }
+  }
 
-    &--light {
-        color: var(--color-gray-15);
-        background-color: var(--color-light);
-        border: var(--border);
+  &--gray {
+    background-color: var(--color-light-97);
+    border: var(--border);
+    color: var(--color-gray-15);
+    font-weight: 500;
 
-        @include hover {
-            background-color: var(--color-light-95);
-            color: var(--color-gray-50);
-        }
+    @include hover {
+      color: var(--color-gray-20);
+      background-color: var(--color-light-99);
     }
+  }
 
-    &--play,
-    &--pause {
-        position: relative;
-        border: 6px solid rgba(255, 255, 255, 0.3);
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 68px;
-        padding: 14px;
-        width: 72px;
-        height: 72px;
+  &--tab {
+    background-color: transparent;
+    color: var(--color-gray-30);
+    font-weight: 500;
 
-        @include hover {
-            background: rgba(255, 255, 255, 0.4);
-            border-color: rgba(255, 255, 255, 0.5);
-        }
+    @include hover {
+      background-color: var(--color-light-95);
+      color: inherit;
+      border-color: var(--color-light-95);
     }
+  }
 
-    &--play::after {
+  &--active {
+    background-color: var(--color-orange-50);
+    color: var(--color-light);
+    pointer-events: none;
+
+    @include hover {
+      background-color: inherit;
+      color: inherit;
+    }
+  }
+
+  &--faq {
+    --size: #{fluid(56, 40)};
+
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 30px;
+    border: var(--border);
+    background-color: var(--color-light-97);
+    border-radius: var(--border-radius);
+    color: var(--color-gray-15);
+    font-weight: 500;
+
+    &-icon {
+      position: relative;
+
+      display: flex;
+      width: var(--size);
+      height: var(--size);
+      border: var(--border);
+      border-radius: 50%;
+      background-color: var(--color-light);
+
+      &::after {
+        --size: #{fluid(28, 20)};
+
+        content: "";
         position: absolute;
-        top: 50%;
-        left: 50%;
-        translate: -50% -50%;
-        content: '';
-        width: 44px;
-        height: 44px;
         display: block;
-        background: url('public/icons/play.svg') center/contain no-repeat;
-    }
-
-    &--view {
-        background-color: var(--color-light);
-        border: var(--border);
-        font-weight: 500;
-        color: var(--color-gray-15);
-
-        @include hover {
-            background-color: var(--color-light-95);
-            color: var(--color-gray-50);
-        }
-    }
-
-    &--box {
-        --size: 74px;
-
-        position: relative;
         width: var(--size);
         height: var(--size);
-        background-color: var(--color-light-99);
-        border: var(--border);
-        border-radius: var(--border-radius);
-        padding: 20px;
-
-        @include laptop {
-            --size: 54px;
-        }
-
-        &::after {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            translate: -50% -50%;
-            content: '';
-            width: 44px;
-            height: 44px;
-            display: block;
-            background: url('public/icons/right-down-arrow.svg') center/contain no-repeat;
-        }
-
-        @include hover {
-            background-color: var(--color-light-95);
-        }
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url("public/icons/arrow-right-alt.svg") center/contain
+          no-repeat;
+      }
     }
-
-    &--gray {
-        background-color: var(--color-light-97);
-        border: var(--border);
-        color: var(--color-gray-15);
-        font-weight: 500;
-
-        @include hover {
-            color: var(--color-gray-20);
-            background-color: var(--color-light-99);
-        }
-    }
-
-    &--tab {
-        background-color: transparent;
-        color: var(--color-gray-30);
-        font-weight: 500;
-
-        @include hover {
-            background-color: var(--color-light-95);
-            color: inherit;
-            border-color: var(--color-light-95);
-        }
-    }
-
-    &--active {
-        background-color: var(--color-orange-50);
-        color: var(--color-light);
-        pointer-events: none;
-
-        @include hover {
-            background-color: inherit;
-            color: inherit;
-        }
-
-    }
-
+  }
 }

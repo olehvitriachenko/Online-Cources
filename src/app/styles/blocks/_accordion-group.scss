@@ -1,0 +1,13 @@
+@use "../helpers" as *;
+
+.accordion-group {
+  display: flex;
+  flex-direction: column;
+  padding: fluid(30, 20) fluid(50, 24);
+  background-color: transparent;
+  border: var(--border);
+  border-radius: var(--border-radius-medium);
+  width: 100%;
+
+  // row-gap: fluid(50, 20);
+}

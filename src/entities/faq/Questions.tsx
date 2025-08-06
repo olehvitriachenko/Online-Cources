@@ -8,9 +8,11 @@ function Questions() {
     <section className="questions container">
       <div className="questions__inner">
         <header className="questions__header">
-          <h1 className="questions__title">{questionsData.title}</h1>
-          <div className="questions__description">
-            {questionsData.description}
+          <div className="questions__header-inner">
+            <h1 className="questions__title">{questionsData.title}</h1>
+            <div className="questions__description">
+              {questionsData.description}
+            </div>
           </div>
           <a href="/" className="questions__link button button--view">
             {questionsData.linkFaq}

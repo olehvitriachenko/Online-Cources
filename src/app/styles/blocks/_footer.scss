@@ -1,0 +1,20 @@
+@use "../helpers" as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-light);
+
+  &__main {
+  }
+
+  &__info {
+  }
+
+  &__copyright {
+    display: flex;
+    padding-block: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+}

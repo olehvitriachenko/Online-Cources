@@ -12,26 +12,33 @@ const QuestionsAccordion: React.FC<Props> = ({
   onToggle,
 }) => {
   return (
-    <details className="accordion" open={isOpen}>
-      <summary
-        className="accordion__summary"
-        onClick={(e) => {
-          e.preventDefault();
-          onToggle();
-        }}
-      >
-        <h2 className="accordion__title">{accordion.title}</h2>
-        <span className="accordion__marker marker"></span>
-      </summary>
-      <div className="accordion__description">
-        <p>{accordion.description}</p>
+    <div className="accordion-group">
+      <div className="accordion">
+        <details className="accordion__details" open={isOpen}>
+          <summary
+            className="accordion__summary"
+            onClick={(e) => {
+              e.preventDefault();
+              onToggle();
+            }}
+          >
+            <h2 className="accordion__title">{accordion.title}</h2>
+            <span className="accordion__marker marker"></span>
+          </summary>
+        </details>
+        <div className="accordion__definition" role="definition">
+          <div className="accordion__definition-inner">
+            <div className="accordion__definition-body">
+              <p>{accordion.description}</p>
+              <a href="/" className="accordion__link button button--faq">
+                {accordion.linkInfo}
+                <span className="button--faq-icon"></span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <nav className="accordion__nav">
-        <a href="/" className="accordion__link">
-          {accordion.linkInfo}
-        </a>
-      </nav>
-    </details>
+    </div>
   );
 };
 
