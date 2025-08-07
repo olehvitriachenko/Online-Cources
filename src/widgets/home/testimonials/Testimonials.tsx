@@ -8,6 +8,7 @@ function Testimonials() {
       title={TestimonialsData.title}
       description={TestimonialsData.description}
       link={TestimonialsData.link}
+      id="testimonials"
       content={
         <>
           <ul className="section__list grid grid--2-cols">

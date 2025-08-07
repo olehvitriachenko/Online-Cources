@@ -8,6 +8,7 @@ function Courses() {
       title={CoursesData.title}
       description={CoursesData.description}
       link={CoursesData.link}
+      id="courses"
       content={
         <>
           <ul className="section__list grid grid--2-cols">

@@ -5,7 +5,7 @@ import QuestionsAccordion from "./ui/QuestionsAccordion";
 function Questions() {
   const [isActiveIndex, setIsActiveIndex] = useState<number | null>(null);
   return (
-    <section className="questions container">
+    <section className="questions container" id="questions">
       <div className="questions__inner">
         <header className="questions__header">
           <div className="questions__header-inner">

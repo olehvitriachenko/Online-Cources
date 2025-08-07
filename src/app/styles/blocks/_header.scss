@@ -77,6 +77,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 14px 0;
+    column-gap: 20px;
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
 
     &-list {
       display: flex;

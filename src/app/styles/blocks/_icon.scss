@@ -1,53 +1,83 @@
 @use "../helpers" as *;
 
 .icon {
-    display: flex;
-    --iconSize: 24px;
+  display: flex;
+  --iconSize: 24px;
 
-    &--arrow {
+  &--arrow {
+    &::after {
+      content: "";
+      width: var(--iconSize);
+      height: var(--iconSize);
+      display: block;
+      margin-left: 23px;
+      background: url("../../../../public/icons/right-arrow.svg") center/contain
+        no-repeat;
 
-        &::after {
-            content: '';
-            width: var(--iconSize);
-            height: var(--iconSize);
-            display: block;
-            margin-left: 23px;
-            background: url('../../../../public/icons/right-arrow.svg') center/contain no-repeat;
-
-            @include laptop {
-                --iconSize: 20px;
-                margin-left: 14px;
-            }
-        }
-
-
-    }
-
-    &--blaze {
-        width: 48px;
-        height: 48px;
-        background-color: var(--color-orange-95);
-        position: relative;
-        border-radius: var(--border-radius);
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            translate: -50% -50%;
-            width: var(--iconSize);
-            height: var(--iconSize);
-            display: block;
-            background: url('../../../../public/icons/blaze.svg') center/contain no-repeat;
-
-            @include laptop {
-                --iconSize: 20px;
-            }
-        }
-    }
-
-    @include laptop {
+      @include laptop {
         --iconSize: 20px;
+        margin-left: 14px;
+      }
     }
+  }
+
+  &--email,
+  &--tel,
+  &--map {
+    &::after {
+      content: "";
+      width: var(--iconSize);
+      height: var(--iconSize);
+      display: block;
+
+      @include laptop {
+        --iconSize: 20px;
+      }
+    }
+  }
+
+  &--email {
+    &::after {
+      background: url("public/icons/email.svg") center/contain no-repeat;
+    }
+  }
+  &--tel {
+    &::after {
+      background: url("public/icons/phone.svg") center/contain no-repeat;
+    }
+  }
+  &--map {
+    &::after {
+      background: url("public/icons/map.svg") center/contain no-repeat;
+    }
+  }
+
+  &--blaze {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-orange-95);
+    position: relative;
+    border-radius: var(--border-radius);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      width: var(--iconSize);
+      height: var(--iconSize);
+      display: block;
+      background: url("../../../../public/icons/blaze.svg") center/contain
+        no-repeat;
+
+      @include laptop {
+        --iconSize: 20px;
+      }
+    }
+  }
+
+  @include laptop {
+    --iconSize: 20px;
+  }
 }

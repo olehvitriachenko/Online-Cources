@@ -6,6 +6,7 @@ type Course = {
   duration: string;
   level: string;
   author: string;
+  link: string;
 };
 type Props = { course: Course };
 const CourseCard: React.FC<Props> = ({ course }) => {
@@ -15,10 +16,10 @@ const CourseCard: React.FC<Props> = ({ course }) => {
         <img src={course.image} alt="Course Image" className="course__image" />
         <div className="course__info">
           <div className="course__about">
-            <span className="course__duration">{course.duration}</span>
-            <span className="course__level">{course.level}</span>
+            <span className="course__duration badge">{course.duration}</span>
+            <span className="course__level badge">{course.level}</span>
           </div>
-          <span className="course__author"></span>
+          <span className="course__author">{course.author}</span>
         </div>
       </header>
       <div className="course__body">
@@ -27,6 +28,9 @@ const CourseCard: React.FC<Props> = ({ course }) => {
           <p>{course.description}</p>
         </div>
       </div>
+      <a href="/" className="button button--gray course__link">
+        {course.link}
+      </a>
     </li>
   );
 };

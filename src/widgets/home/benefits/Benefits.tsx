@@ -7,6 +7,7 @@ function Benefits() {
       title={BenefitsData.title}
       description={BenefitsData.description}
       link={BenefitsData.link}
+      id="benefits"
       content={
         <>
           <ul className="section__list grid grid--3-cols">

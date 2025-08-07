@@ -11,9 +11,9 @@ type Props = { pricingType: PricingType[] };
 const PricingList: React.FC<Props> = ({ pricingType }) => {
   return (
     <>
-      {pricingType.map((pricing, index) => (
-        <div className="pricing-card" key={index}>
-          <div className="pricing-card__card">
+      <div className="pricing-card">
+        {pricingType.map((pricing, index) => (
+          <div className="pricing-card__card" key={index}>
             <h3 className="pricing-card__title">{pricing.type} Plan</h3>
             <div className="pricing-card__inner">
               <p>
@@ -52,8 +52,8 @@ const PricingList: React.FC<Props> = ({ pricingType }) => {
               </a>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </>
   );
 };

@@ -8,6 +8,7 @@ type SectionProps = Partial<{
   content: ReactNode;
   className: string;
   tabs: ReactNode;
+  id: string;
 }>;
 
 // Зробити опшионал
@@ -20,9 +21,10 @@ const Section: React.FC<SectionProps> = ({
   screenReader = "Section",
   className = "",
   tabs,
+  id,
 }: SectionProps) => {
   return (
-    <section className={`section container `}>
+    <section className={`section container `} id={id}>
       <h1 className="visually-hidden">{screenReader}</h1>
       <header className={`section__header `}>
         <h2 className={`section__title h1`}>{title}</h2>
