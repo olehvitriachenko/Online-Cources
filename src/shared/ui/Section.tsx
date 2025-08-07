@@ -9,6 +9,7 @@ type SectionProps = Partial<{
   className: string;
   tabs: ReactNode;
   id: string;
+  hasLink: boolean;
 }>;
 
 // Зробити опшионал
@@ -22,6 +23,7 @@ const Section: React.FC<SectionProps> = ({
   className = "",
   tabs,
   id,
+  hasLink = true,
 }: SectionProps) => {
   return (
     <section className={`section container `} id={id}>
@@ -32,7 +34,7 @@ const Section: React.FC<SectionProps> = ({
           <div className={`section__description`}>
             <p>{description}</p>
           </div>
-          {!tabs && (
+          {!tabs && hasLink && (
             <a href="" className={`section__link button button--view `}>
               {link}
             </a>

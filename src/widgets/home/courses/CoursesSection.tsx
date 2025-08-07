@@ -2,7 +2,7 @@ import Section from "../../../shared/ui/Section";
 import { CoursesData, CoursesList } from "./config/courses";
 import CourseCard from "./ui/CourseCard";
 
-function Courses() {
+function CoursesSection() {
   return (
     <Section
       title={CoursesData.title}
@@ -22,4 +22,4 @@ function Courses() {
   );
 }
 
-export default Courses;
+export default CoursesSection;

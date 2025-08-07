@@ -15,7 +15,9 @@ function Benefits() {
               return (
                 <li className="grid__item benefits" key={index}>
                   <div className="benefits__body">
-                    <h3 className="benefits__number">{benefit.number}</h3>
+                    <h3 className="benefits__number number">
+                      {benefit.number}
+                    </h3>
                     <div className="benefits__body-inner">
                       <h4 className="benefits__title">{benefit.title}</h4>
                       <div className="benefits__description">

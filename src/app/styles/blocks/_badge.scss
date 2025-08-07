@@ -1,8 +1,8 @@
 @use "../helpers" as *;
 
 .badge {
-    padding: 10px 16px;
-    border: var(--border);
-    border-radius: var(--border-radius);
-    background-color: var(--color-light);
+  padding: 10px 16px;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: transparent;
 }

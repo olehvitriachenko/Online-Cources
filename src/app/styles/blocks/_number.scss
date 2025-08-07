@@ -1,0 +1,11 @@
+@use "../helpers" as *;
+
+.number {
+  @include fluid-text(80, 50);
+  font-weight: 700;
+  color: var(--color-gray-15);
+
+  &--mini {
+    @include fluid-text(50, 30);
+  }
+}

@@ -9,6 +9,7 @@
   color: var(--color-light);
   font-size: 18px;
   border: 1px solid transparent;
+  white-space: nowrap;
 
   &:not(.header__link) {
     padding: 18px 24px;
@@ -153,6 +154,7 @@
   &--faq {
     --size: #{fluid(56, 40)};
 
+    white-space: wrap;
     display: flex;
     justify-content: space-between;
     padding: 35px 30px;

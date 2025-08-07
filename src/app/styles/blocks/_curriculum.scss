@@ -1,0 +1,52 @@
+@use "../helpers/" as *;
+
+.curriculum {
+  --gap: 50px;
+  border: var(--border);
+  border-radius: var(--border-radius-medium);
+
+  &__head {
+    border-bottom: var(--border);
+    width: 100%;
+  }
+
+  &__title {
+    @include fluid-text(22, 16);
+    padding: fluid(24, 14) fluid(30, 20);
+    font-weight: 600;
+    color: var(--color-gray-15);
+  }
+
+  &__list {
+    display: flex;
+    column-gap: var(--gap);
+    padding: 30px 50px;
+    white-space: wrap;
+
+    @include tablet {
+      row-gap: var(--gap);
+      padding: 24px;
+      flex-direction: column;
+    }
+    @include laptop {
+      padding: 24px 40px;
+      --gap: 40px;
+    }
+  }
+
+  &__item {
+    @include tablet-above {
+      &:not(:last-child) {
+        border-right: var(--border);
+        padding-right: var(--gap);
+      }
+    }
+    @include tablet {
+      --gap: 20px;
+      &:not(:last-child) {
+        border-bottom: var(--border);
+        padding-bottom: var(--gap);
+      }
+    }
+  }
+}

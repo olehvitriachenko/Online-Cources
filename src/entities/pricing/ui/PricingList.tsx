@@ -17,7 +17,9 @@ const PricingList: React.FC<Props> = ({ pricingType }) => {
             <h3 className="pricing-card__title">{pricing.type} Plan</h3>
             <div className="pricing-card__inner">
               <p>
-                <span className="pricing-card__price">{pricing.price}</span>
+                <span className="pricing-card__price number">
+                  {pricing.price}
+                </span>
                 <span className="pricing-card__termin">{pricing.termin}</span>
               </p>
             </div>
