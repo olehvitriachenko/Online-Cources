@@ -1,8 +1,17 @@
 import { useRef, useState } from "react";
 import Button from "../../../../shared/ui/Button";
-import poster from "public/images/hero/poster.jpg";
 
-function Intro() {
+type VideoProps = Partial<{
+  linkToPoster: string;
+  linkToVideo: string;
+  className: string;
+}>;
+
+const Intro: React.FC<VideoProps> = ({
+  linkToPoster,
+  linkToVideo,
+  className,
+}: VideoProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -16,14 +25,14 @@ function Intro() {
   };
 
   return (
-    <div className="intro container">
+    <div className={`intro`}>
       <video
         ref={videoRef}
-        src="public/videos/sapmle.mp4"
-        className="intro__video"
+        src={linkToVideo}
+        className={`intro__video ${className}`}
         // width={1280}
         // height={649}
-        poster={poster}
+        poster={linkToPoster}
         onClick={handlePause}
       />
       {!isPlaying && (
@@ -50,6 +59,6 @@ function Intro() {
       )} */}
     </div>
   );
-}
+};
 
 export default Intro;

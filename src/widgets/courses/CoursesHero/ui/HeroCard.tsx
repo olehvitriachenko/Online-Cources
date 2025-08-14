@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 type Card = {
   title: string;
   description: string;
@@ -28,9 +30,12 @@ export default function HeroCard({ card }: Props) {
               <p>{card.description}</p>
             </div>
           </div>
-          <a href="/" className="course-card__link button button--view">
+          <Link
+            to={`/courses/course&page&opened?id=${card.id}`}
+            className="course-card__link button button--view"
+          >
             {card.courseLink}
-          </a>
+          </Link>
         </div>
         <ul className="course-card__header-list">
           {card.courseImages.map((image) => (

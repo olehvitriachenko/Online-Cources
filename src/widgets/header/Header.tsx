@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import ModalComponent from "../../features/navigation/ui/ModalNavigation";
 import Navigation from "../../features/navigation/ui/Navigation";
 import { useState } from "react";
@@ -9,11 +10,11 @@ function Header() {
     <>
       <header className="header">
         <div className="header__extra">
-          <a href="#" className="header__extra-faded">
+          <Link to="/courses" className="header__extra-faded">
             <span className="icon icon--arrow">
               Free Courses 🌟 Sale Ends Soon, Get It Now
             </span>
-          </a>
+          </Link>
         </div>
         <div className="header__body container">
           <Navigation onBurgerClick={() => setIsModalOpen(true)} />

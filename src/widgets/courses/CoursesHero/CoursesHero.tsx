@@ -10,9 +10,11 @@ function CoursesHero() {
       description={coursesInformation.description}
       content={
         <>
-          {coursesCardData.map((card) => (
-            <HeroCard card={card} key={card.id} />
-          ))}
+          <div className="section__courses">
+            {coursesCardData.map((card) => (
+              <HeroCard card={card} key={card.id} />
+            ))}
+          </div>
         </>
       }
     />

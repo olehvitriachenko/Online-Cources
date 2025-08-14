@@ -1,9 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import BurgerButton from "../../../shared/ui/BurgerButton";
+import { useSсrollToTop } from "../../../shared/lib/useScrollToTop";
 
 function Navigation({ onBurgerClick }: { onBurgerClick: () => void }) {
   const location = useLocation();
   const currentPath = location.pathname;
+
+  useSсrollToTop(currentPath);
 
   return (
     <>
@@ -29,10 +32,17 @@ function Navigation({ onBurgerClick }: { onBurgerClick: () => void }) {
                   <Link
                     to="/courses"
                     className={`header__link${
-                      currentPath === "/courses"
+                      currentPath === "/courses" ||
+                      currentPath === "/courses/course&page&opened"
                         ? " header__link--selected"
                         : ""
-                    }`}
+                    }
+                    ${
+                      currentPath === "/courses/course&page&opened"
+                        ? " header__link--selected-click"
+                        : ""
+                    }    
+                    `}
                   >
                     Courses
                   </Link>

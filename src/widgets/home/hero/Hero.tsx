@@ -1,5 +1,6 @@
 import Intro from "./ui/Intro";
 import Partners from "../../../entities/partners/ui/Partners";
+import poster from "public/images/hero/poster.jpg";
 
 function Hero() {
   return (
@@ -36,7 +37,7 @@ function Hero() {
           <Partners />
         </div>
         <div className="hero__intro">
-          <Intro />
+          <Intro linkToPoster={poster} />
         </div>
       </div>
     </section>

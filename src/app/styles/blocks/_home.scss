@@ -1,0 +1,12 @@
+@use "../helpers" as *;
+
+.home {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: fluid(100, 50);
+}
+
+.home .questions {
+  margin-top: fluid(50, 0);
+}

@@ -1,0 +1,57 @@
+@use "../helpers/" as *;
+
+.lesson {
+  display: flex;
+  border: var(--border);
+  cursor: pointer;
+  border-radius: fluid(8, 6);
+  padding: 24px 30px;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+  transition-duration: var(--transition-duration);
+  user-select: none;
+
+  &--active {
+    box-shadow: 0 0 0 4px var(--color-orange-95);
+    pointer-events: none;
+
+    & .lesson__duration {
+      background-color: var(--color-orange-95);
+    }
+  }
+
+  @include hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  @include mobile {
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  &__title {
+    color: var(--color-gray-20);
+    @include fluid-text(20, 16);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(6, 2);
+  }
+
+  &__duration {
+    padding: 12px 14px;
+    background-color: var(--color-light-97);
+    border-radius: var(--border-radius-small);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+
+    @include mobile {
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@use "../helpers/" as *;
+
+.course-curriculum {
+  white-space: wrap;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius-medium);
+  row-gap: fluid(50, 30);
+  padding: fluid(50, 30);
+  height: 100%;
+
+  &__number {
+    align-self: flex-end;
+  }
+
+  &__title {
+    @include fluid-text(24, 18);
+    color: var(--color-gray-20);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}

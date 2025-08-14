@@ -1,6 +1,14 @@
 @use "../helpers" as *;
 
 .header {
+  // position: sticky;
+  // top: 0;
+  // z-index: 100;
+  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+  // padding-top: 10px;
+  margin-bottom: fluid(109, 50);
+
+  background-color: var(--color-light-97);
   &__extra {
     margin-top: 20px;
     margin-inline: 30px;
@@ -176,10 +184,21 @@
 
     &--selected {
       background-color: var(--color-light-95);
-      pointer-events: none;
+
+      &:not(.header__link--selected-click) {
+        pointer-events: none;
+      }
 
       @include hover {
         background-color: var(inherit);
+        color: inherit;
+      }
+
+      &-click {
+        @include hover {
+          background-color: var(--color-orange-90);
+          color: var(--color-gray-15);
+        }
       }
     }
 

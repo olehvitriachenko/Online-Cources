@@ -23,7 +23,8 @@
 
   &--email,
   &--tel,
-  &--map {
+  &--map,
+  &--time {
     &::after {
       content: "";
       width: var(--iconSize);
@@ -39,6 +40,11 @@
   &--email {
     &::after {
       background: url("public/icons/email.svg") center/contain no-repeat;
+    }
+  }
+  &--time {
+    &::after {
+      background: url("public/icons/clock.svg") center/contain no-repeat;
     }
   }
   &--tel {
