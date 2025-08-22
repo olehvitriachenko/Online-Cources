@@ -1,0 +1,13 @@
+@use "../helpers" as *;
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  row-gap: fluid(80, 50);
+
+  &__title {
+    color: var(--color-gray-20);
+    @include fluid-text(48, 24);
+    font-weight: 500;
+  }
+}

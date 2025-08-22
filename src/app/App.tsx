@@ -5,6 +5,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Courses from "../pages/Courses";
 import Pricing from "../pages/Pricing";
 import CourseOpened from "../pages/CourseOpened";
+import AboutUs from "../pages/About";
+import Contacts from "../pages/Contacts";
+import LogIn from "../pages/LogIn";
+import SignUp from "../pages/SignUp";
 
 function App() {
   return (
@@ -18,7 +22,11 @@ function App() {
             path="/courses/course&page&opened"
             element={<CourseOpened />}
           />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/contact" element={<Contacts />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<LogIn />} />
         </Routes>
       </main>
       <Footer />

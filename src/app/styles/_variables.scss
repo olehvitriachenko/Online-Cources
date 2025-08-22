@@ -30,7 +30,9 @@
   --border: 1px solid var(--color-light-95);
   --border-radius-small: 6px;
   --border-radius: 8px;
-  --border-radius-medium: 12px;
+  --border-radius-medium: #{fluid(12, 10)};
+  --border-r-s-medium: #{fluid(10, 8)};
+  --border-raduis-very-small: 4px;
   --transition-duration: 0.2s;
 
   --color-light: #fff;

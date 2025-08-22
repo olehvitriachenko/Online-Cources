@@ -1,0 +1,109 @@
+@use "../helpers" as *;
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  max-width: fluid(660, 357);
+  background-color: var(--color-light);
+  border-radius: var(--border-radius-medium);
+  width: 100%;
+  row-gap: fluid(50, 30);
+
+  &__header {
+    white-space: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 12px;
+
+    @include laptop {
+      row-gap: 8px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+    @include laptop {
+      row-gap: 24px;
+    }
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      width: 100%;
+    }
+
+    &-entrance {
+      display: flex;
+      flex-direction: column;
+      row-gap: fluid(30, 24);
+      width: 100%;
+      align-items: center;
+    }
+
+    @include laptop {
+      row-gap: 20px;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+
+    @include laptop {
+      row-gap: 10px;
+    }
+  }
+
+  &__label {
+    font-weight: 500;
+    color: var(--color-gray-15);
+  }
+  &__input {
+    padding: 24px;
+    background-color: var(--color-light-99);
+    border: var(--border);
+    border-radius: var(--border-r-s-medium);
+    width: 100%;
+
+    @include laptop {
+      padding: 20px;
+    }
+  }
+
+  &__divider {
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+
+    &-text {
+      color: var(--color-gray-60);
+    }
+
+    &-line {
+      width: fluid(255, 127);
+      height: 1px;
+      background-color: var(--color-light-90);
+    }
+  }
+
+  &__subdescription {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    &-link {
+      font-weight: 600;
+      text-decoration: underline;
+      flex-direction: row;
+      column-gap: 6px;
+    }
+  }
+}

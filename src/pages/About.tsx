@@ -1,7 +1,7 @@
-import Section from "../shared/ui/Section";
+import AboutSection from "../widgets/about/AboutSection/AboutSection";
 
 function AboutUs() {
-  return <Section title="" description="" content={} />;
+  return <AboutSection />;
 }
 
 export default AboutUs;

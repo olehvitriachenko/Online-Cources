@@ -1,0 +1,44 @@
+@use "../helpers" as *;
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  @include laptop {
+    column-gap: 8px;
+  }
+
+  &__button {
+    position: relative;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition-duration: var(--transition-duration);
+
+    --size: #{fluid(30, 24)};
+    width: var(--size);
+    height: var(--size);
+    border: var(--border);
+    background-color: var(--color-light-97);
+    border-radius: var(--border-raduis-very-small);
+
+    &:checked {
+      background-color: var(--color-light-95);
+
+      &::after {
+        --size: #{fluid(20, 18)};
+        content: "";
+        width: var(--size);
+        height: var(--size);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url("../../../../public/icons/check.svg") center/contain
+          no-repeat;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use "../helpers" as *;
+
+.about-card {
+  background-color: var(--color-light);
+  padding: fluid(50, 30);
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius-medium);
+  row-gap: fluid(30, 24);
+  height: 100%;
+
+  &__icon {
+    --size: #{fluid(66, 56)};
+    border-radius: var(--border-radius);
+    border: 1px var(--color-orange-90) solid;
+    border-radius: 8px;
+    max-width: var(--size);
+    max-height: var(--size);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(14, 6);
+  }
+
+  &__title {
+    @include fluid-text(24, 18);
+    color: var(--color-gray-15);
+    font-weight: 500;
+  }
+}

@@ -97,6 +97,12 @@
       flex-direction: column;
       row-gap: fluid(100, 50);
     }
+
+    &--about {
+      display: flex;
+      flex-direction: column;
+      row-gap: fluid(177, 50);
+    }
   }
 
   &__link {

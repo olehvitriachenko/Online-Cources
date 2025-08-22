@@ -1,12 +1,15 @@
 @use "../helpers" as *;
 
 .footer {
+  z-index: 1;
   margin-top: fluid(140, 50);
   display: flex;
   flex-direction: column;
   background-color: var(--color-light);
 
   &__inner {
+    z-index: 1;
+
     width: 100%;
   }
 

@@ -4,19 +4,47 @@
   display: flex;
   --iconSize: 24px;
 
-  &--arrow {
+  &--google {
+    --iconSize: 30px;
+
+    &::after {
+      content: "";
+      width: var(--iconSize);
+      height: var(--iconSize);
+      display: block;
+      background: url("public/icons/google-icon.svg") center/contain no-repeat;
+    }
+  }
+
+  &--arrow,
+  &--arrow-right-top {
     &::after {
       content: "";
       width: var(--iconSize);
       height: var(--iconSize);
       display: block;
       margin-left: 23px;
-      background: url("../../../../public/icons/right-arrow.svg") center/contain
-        no-repeat;
 
       @include laptop {
         --iconSize: 20px;
         margin-left: 14px;
+      }
+    }
+  }
+
+  &--arrow {
+    &::after {
+      background: url("public/icons/right-arrow.svg") center/contain no-repeat;
+    }
+  }
+  &--arrow-right-top {
+    &::after {
+      margin: 0;
+      background: url("public/icons/arrow-top-right.svg") center/contain
+        no-repeat;
+
+      @include hover {
+        color: var(--color-orange-50);
       }
     }
   }

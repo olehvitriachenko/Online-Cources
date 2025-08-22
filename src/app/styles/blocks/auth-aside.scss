@@ -1,0 +1,9 @@
+@use "../helpers" as *;
+
+.auth-aside {
+  &__header {
+    white-space: wrap;
+    display: flex;
+    flex-direction: column;
+  }
+}

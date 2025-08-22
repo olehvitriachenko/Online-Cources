@@ -1,0 +1,11 @@
+@use "../helpers" as *;
+
+.auth-section {
+  display: flex;
+  flex-direction: row;
+  column-gap: 100px;
+
+  @include laptop {
+    column-gap: 80px;
+  }
+}
