@@ -1,0 +1,17 @@
+@use "../helpers" as *;
+
+.auth-slider {
+  display: flex;
+  flex-direction: column;
+  row-gap: fluid(30, 20);
+
+  &__buttons {
+    display: flex;
+    justify-content: end;
+    column-gap: 15px;
+
+    @include laptop {
+      column-gap: 10px;
+    }
+  }
+}

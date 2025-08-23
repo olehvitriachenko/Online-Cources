@@ -8,4 +8,10 @@
   @include laptop {
     column-gap: 80px;
   }
+
+  @include tablet {
+    flex-direction: column-reverse;
+    row-gap: 40px;
+    align-items: center;
+  }
 }

@@ -1,7 +1,7 @@
 import * as yup from "yup";
 import type { AuthFormMode } from "../types/auth";
 
-const loginSchema = yup.object({
+export const loginSchema = yup.object({
   email: yup
     .string()
     .email("Email is wrong")
@@ -10,8 +10,9 @@ const loginSchema = yup.object({
     .string()
     .min(8, "You have to use min 8 symbols")
     .required("Please enter your password"),
+  rememberMe: yup.boolean().optional(),
 });
-const registerSchema = yup.object({
+export const registerSchema = yup.object({
   name: yup
     .string()
     .min(4, "You have to input min 4 symbols")
@@ -25,7 +26,7 @@ const registerSchema = yup.object({
     .min(8, "You have to use min 8 symbols")
     .required("Please enter your password"),
 
-  agreeToTerms: yup.boolean().oneOf([true], "You must to agree to the terms"),
+  agreeToTerms: yup.boolean().oneOf([true], "You must agree to the terms"),
 });
 
 export const getAuthSchema = (mode: AuthFormMode) =>

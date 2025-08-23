@@ -53,28 +53,10 @@
   }
 
   &__field {
-    display: flex;
-    flex-direction: column;
-    row-gap: 14px;
-
-    @include laptop {
-      row-gap: 10px;
-    }
-  }
-
-  &__label {
-    font-weight: 500;
-    color: var(--color-gray-15);
-  }
-  &__input {
-    padding: 24px;
-    background-color: var(--color-light-99);
-    border: var(--border);
-    border-radius: var(--border-r-s-medium);
-    width: 100%;
-
-    @include laptop {
-      padding: 20px;
+    &-inner {
+      &--password {
+        width: 100%;
+      }
     }
   }
 
@@ -94,7 +76,7 @@
     }
   }
 
-  &__subdescription {
+  &__entrance {
     display: flex;
     width: 100%;
     justify-content: center;

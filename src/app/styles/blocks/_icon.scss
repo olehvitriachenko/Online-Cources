@@ -4,6 +4,22 @@
   display: flex;
   --iconSize: 24px;
 
+  @include laptop {
+    --iconSize: 20px;
+  }
+
+  &--password-eye {
+    &::after {
+      content: "";
+      width: var(--iconSize);
+      height: var(--iconSize);
+      display: block;
+      background: url("public/icons/show-password-eye.svg") center/contain
+        no-repeat;
+    }
+  }
+
+  &--arrow-slide,
   &--google {
     --iconSize: 30px;
 
@@ -12,6 +28,24 @@
       width: var(--iconSize);
       height: var(--iconSize);
       display: block;
+    }
+  }
+
+  &--arrow-slide {
+    &::after {
+      background: url("public/icons/icon-arrow-slide.svg") center/contain
+        no-repeat;
+    }
+
+    &-right {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &--google {
+    &::after {
       background: url("public/icons/google-icon.svg") center/contain no-repeat;
     }
   }
@@ -26,7 +60,6 @@
       margin-left: 23px;
 
       @include laptop {
-        --iconSize: 20px;
         margin-left: 14px;
       }
     }
@@ -58,10 +91,6 @@
       width: var(--iconSize);
       height: var(--iconSize);
       display: block;
-
-      @include laptop {
-        --iconSize: 20px;
-      }
     }
   }
 
@@ -104,14 +133,6 @@
       display: block;
       background: url("../../../../public/icons/blaze.svg") center/contain
         no-repeat;
-
-      @include laptop {
-        --iconSize: 20px;
-      }
     }
-  }
-
-  @include laptop {
-    --iconSize: 20px;
   }
 }

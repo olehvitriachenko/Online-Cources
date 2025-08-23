@@ -1,4 +1,4 @@
-import AuthShowcase from "./AuthShowcase";
+import AuthSlider from "../auth/authSlider/ui/AuthSlider";
 
 function AuthAside() {
   return (
@@ -16,7 +16,7 @@ function AuthAside() {
         </header>
 
         <div className="auth-aside__body">
-          <AuthShowcase />
+          <AuthSlider />
         </div>
       </aside>
     </>

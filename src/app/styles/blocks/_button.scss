@@ -206,4 +206,23 @@
       color: var(--color-gray-40);
     }
   }
+
+  &--slide {
+    --size: 62px;
+
+    width: var(--size);
+    height: var(--size);
+
+    border: var(--border);
+    background-color: var(--color-light);
+    border-radius: var(--border-radius);
+
+    @include laptop {
+      --size: 54px;
+    }
+
+    @include hover {
+      background-color: var(--color-light-95);
+    }
+  }
 }
