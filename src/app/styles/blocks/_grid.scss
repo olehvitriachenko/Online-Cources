@@ -1,34 +1,39 @@
 @use "../helpers" as *;
 
 .grid {
-    display: grid;
-    align-items: center;
-    justify-content: center;
+  display: grid;
+  align-items: center;
+  justify-content: center;
 
-    &--2-cols {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+  &--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 
-        @include laptop {
-            gap: 20px;
-        }
-
-        @include tablet {
-            grid-template-columns: 1fr;
-        }
+    @include laptop {
+      gap: 20px;
     }
 
-    &--3-cols {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-
-        @include tablet {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @include mobile {
-            grid-template-columns: 1fr;
-        }
-
+    @include tablet {
+      grid-template-columns: 1fr;
     }
+  }
+
+  &--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    &--full {
+      grid-column: -1/1;
+    }
+  }
 }

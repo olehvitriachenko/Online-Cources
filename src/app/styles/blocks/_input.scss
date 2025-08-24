@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 14px;
+  height: 100%;
 
   @include laptop {
     row-gap: 10px;
@@ -41,7 +42,7 @@
   }
 
   &__field {
-    padding: 24px;
+    padding: 24px 20px;
     background-color: var(--color-light-99);
     border: var(--border);
     border-radius: var(--border-r-s-medium);
@@ -53,6 +54,14 @@
 
     &--forgot-password {
       color: var(--color-gray-30);
+    }
+
+    &--message {
+      // max-width: fluid(916, 298);
+      width: 100%;
+      height: fluid(170, 138);
+      // height: 100%;
+      resize: none;
     }
 
     // &--password {

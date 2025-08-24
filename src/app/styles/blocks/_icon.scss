@@ -94,6 +94,26 @@
     }
   }
 
+  &--email,
+  &--tel,
+  &--map {
+    &-border {
+      padding: 14px;
+      border: var(--border);
+      border-radius: var(--border-radius);
+      background-color: var(--color-light-97);
+      transition-duration: var(--transition-duration);
+
+      @include laptop {
+        padding: 12px;
+      }
+
+      @include hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
   &--email {
     &::after {
       background: url("public/icons/email.svg") center/contain no-repeat;

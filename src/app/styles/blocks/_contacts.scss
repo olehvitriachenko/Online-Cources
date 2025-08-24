@@ -1,0 +1,7 @@
+@use "../helpers/" as *;
+
+.contacts {
+  display: flex;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius-medium);
+}

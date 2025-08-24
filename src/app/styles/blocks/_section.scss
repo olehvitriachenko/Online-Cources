@@ -15,12 +15,15 @@
     display: flex;
     flex-direction: row;
     column-gap: 100px;
-    align-items: center;
     row-gap: 6px;
 
     &:has(.section__link),
     &:has(.section__tabs) {
       flex-direction: column;
+    }
+
+    &:not(:has(.section__link)):not(:has(.section__tabs)) {
+      align-items: center;
     }
 
     @include laptop {

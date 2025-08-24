@@ -1,0 +1,28 @@
+@use "../helpers/" as *;
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-light-99);
+  padding: 30px;
+  width: 100%;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  &__soc1als {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 20px;
+    @include laptop {
+      row-gap: 14px;
+    }
+  }
+}
