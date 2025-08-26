@@ -27,7 +27,7 @@ function Hero() {
               Explore Courses
             </a>
             <a href="/price" className="button button--light hero__link">
-              Contact View Pricing
+              View Pricing
             </a>
           </div>
         </div>

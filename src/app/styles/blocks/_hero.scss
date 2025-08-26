@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   row-gap: 16px;
-  overflow: hidden;
+  // overflow: hidden;
   // margin-block: 100px;
 
   @include laptop {
@@ -21,23 +21,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 20px;
-
-    @include laptop {
-      row-gap: 16px;
-    }
-
-    @include mobile {
-      row-gap: 6px;
-    }
+    row-gap: fluid(20, 6);
 
     &-description {
-      @include fluid-text(18, 14);
+      white-space: wrap;
       text-align: center;
-
-      @include mobile-s {
-        font-size: 13px;
-      }
     }
 
     &-inner {
@@ -45,19 +33,10 @@
       background-color: var(--color-light);
       border-radius: var(--border-radius);
       display: flex;
-      padding: 12px 24px 12px 12px;
+      padding: fluid(19, 14) fluid(20, 14);
       align-items: center;
       column-gap: 10px;
       border: var(--border);
-
-      @include mobile {
-        padding: 14px;
-      }
-
-      @include mobile-s {
-        padding: 6px;
-        column-gap: 4px;
-      }
 
       &::after {
         position: absolute;
@@ -91,6 +70,8 @@
     align-items: center;
     row-gap: 60px;
 
+    padding-inline: 30px;
+
     @include laptop {
       row-gap: 50px;
     }
@@ -104,12 +85,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      row-gap: 6px;
     }
   }
 
   &__subtitle {
-    @include fluid-text(36, 14);
+    white-space: wrap;
+    text-align: center;
+    @include fluid-text(36, 24);
     color: var(--color-black);
     font-weight: 500;
   }

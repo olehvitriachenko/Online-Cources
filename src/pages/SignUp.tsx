@@ -1,4 +1,4 @@
-import AuthSection from "../../../../widgets/auth/ui/AuthSection";
+import AuthSection from "../widgets/auth/ui/AuthSection";
 
 function SignUp() {
   return (

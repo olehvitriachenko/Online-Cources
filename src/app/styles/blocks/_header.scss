@@ -1,17 +1,16 @@
 @use "../helpers" as *;
 
 .header {
-  // position: sticky;
-  // top: 0;
-  // z-index: 100;
-  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
-  // padding-top: 10px;
   margin-bottom: fluid(109, 50);
+
+  padding: fluid(20) fluid(30);
 
   background-color: var(--color-light-97);
   &__extra {
-    margin-top: 20px;
-    margin-inline: 30px;
+    width: 100%;
+
+    // margin-top: 20px;
+    // margin-inline: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,19 +19,6 @@
     text-align: center;
     white-space: normal;
     padding-block: 14px;
-
-    @include laptop {
-      padding-block: 10px;
-    }
-
-    @include mobile {
-      margin-top: 40px;
-      margin-inline: 16px;
-    }
-
-    @include mobile-s {
-      margin-inline: 12px;
-    }
 
     &-faded {
       color: var(--color-light);
@@ -64,23 +50,28 @@
   }
 
   &__body {
-    padding: 20px 132px 24px 132px;
+    // width: 100%;
+    padding-inline: fluid(132, 0);
+    padding-block: fluid(24, 14) fluid(20, 14);
+    // padding: 20px 132px 24px 132px;
     border-bottom: var(--border);
 
     @include laptop {
-      padding: 16px 60px 20px 60px;
+      // padding: 16px 60px 20px 60px;
     }
 
     @include tablet {
-      padding: 16px 20px 20px 20px;
+      // padding: 16px 20px 20px 20px;
     }
 
     @include mobile {
-      padding: 0px 14px;
+      // padding: 0px 14px;
     }
   }
 
   &__nav {
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -173,7 +164,7 @@
     padding: 14px 34px;
     font-size: 18px;
 
-    max-width: 100px;
+    // max-width: 100px;
     user-select: none;
 
     @include laptop {

@@ -15,9 +15,9 @@ function ContactUs() {
       description={contactsData.description}
       content={
         <>
-          <div className="contacts">
+          <div className="contact-us">
             <form
-              className="contacts__form contacts-form"
+              className="contact-us__form contacts-form"
               onSubmit={handleSubmit((data) => {
                 console.log(`Registering... ${data}`);
                 reset();
@@ -95,9 +95,11 @@ function ContactUs() {
                   />
                 </div>
               </div>
-              <button className="contacts-form__button button">
-                Send Your Message
-              </button>
+              <div className="contacts-form__inner--button">
+                <button className="contacts-form__button button">
+                  Send Your Message
+                </button>
+              </div>
             </form>
             <ContactsInfo />
           </div>

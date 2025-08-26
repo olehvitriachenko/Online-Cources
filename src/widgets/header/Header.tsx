@@ -16,7 +16,7 @@ function Header() {
             </span>
           </Link>
         </div>
-        <div className="header__body container">
+        <div className="header__body">
           <Navigation onBurgerClick={() => setIsModalOpen(true)} />
         </div>
       </header>

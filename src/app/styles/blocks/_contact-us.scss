@@ -1,7 +1,11 @@
 @use "../helpers/" as *;
 
-.contacts {
+.contact-us {
   display: flex;
   background-color: var(--color-light);
   border-radius: var(--border-radius-medium);
+
+  @include tablet {
+    flex-direction: column;
+  }
 }
