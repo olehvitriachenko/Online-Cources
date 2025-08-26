@@ -48,6 +48,11 @@
     border-radius: var(--border-r-s-medium);
     width: 100%;
 
+    @include hover {
+      opacity: 0.9;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
     @include laptop {
       padding: 20px;
     }
@@ -67,12 +72,13 @@
     // &--password {
     //   width: 100%;
     // }
+    &--password &::-webkit-password-toggle-button,
+    &--password::-ms-reveal {
+      display: none !important;
+      visibility: hidden !important;
+    }
   }
 
-  &--password &::-webkit-password-toggle-button,
-  &--password::-ms-reveal {
-    display: none;
-  }
 
   &__error {
     color: rgb(233, 34, 34);

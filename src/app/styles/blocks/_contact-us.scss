@@ -1,11 +1,13 @@
 @use "../helpers/" as *;
 
 .contact-us {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   background-color: var(--color-light);
   border-radius: var(--border-radius-medium);
 
   @include tablet {
+    grid-template-columns: 1fr;
     flex-direction: column;
   }
 }

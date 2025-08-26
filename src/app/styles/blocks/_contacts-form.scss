@@ -4,8 +4,12 @@
   display: flex;
   flex-direction: column;
   row-gap: fluid(50, 30);
-  border-right: var(--border);
-  // width: 100%;
+  width: 100%;
+
+  @include tablet-above {
+    border-right: var(--border);
+
+  }
 
   &__inner {
     // display: flex;
@@ -19,6 +23,7 @@
 
   &__button {
     margin-bottom: fluid(80, 30);
+
     @include mobile-above {
       align-self: center;
     }

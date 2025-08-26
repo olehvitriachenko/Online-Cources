@@ -1,12 +1,11 @@
 @use "../helpers/" as *;
 
 .contacts-info {
-  display: flex;
+  display: grid;
   flex-direction: column;
   justify-content: center;
   row-gap: fluid(50, 20);
   align-items: center;
-  width: 100%;
+  // width: 100%;
   padding: fluid(80, 30);
-  max-width: fluid(520, 358);
 }
